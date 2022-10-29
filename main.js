@@ -22,6 +22,10 @@ function eraseCookie(name) {
     document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 var kname = 'jgtu';
-setCookie(kname, Math.random());
+
 var c = getCookie(kname);
-console.log({c})
+console.log('old', {c})
+
+setCookie(kname, Math.random());
+c = getCookie(kname);
+console.log('new', {c})
